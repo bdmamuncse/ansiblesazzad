@@ -1,0 +1,65 @@
+---
+- hosts: prosenjit
+  remote_user: sazzad
+  become: yes
+  become_method: sudo
+  ignore_errors: yes
+  gather_facts: False
+
+#python -c 'import crypt; print crypt.crypt("Cbl@1234", "$6$SomeSalt$")'
+  vars:
+# $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_srahman: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_naim: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_shohidul: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_pavel: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_kartick: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_naim: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_limon: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_shafayet: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_alim: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_tanvir: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_bipul: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_mamun: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+#    - password_rony: $1$SomeSalt$/c/VeBt8xZqz9ycW/VxaP0
+    - password_pamuser: $1$SomeSalt$.uId.tU4bADsF4nFfuwuj1
+
+
+
+
+
+  tasks:
+#    - user : name=dharmang.makwana password={{password_dharmang}}
+#    - user : name=sanjay.chauhan password={{password_sanjay}}
+#    - user : name=shohidul  password={{password_shohidul}}
+#    - user : name=pavel     password={{password_pavel}}
+#    - user : name=kartick   password={{password_kartick}}
+#    - user : name=naim      password={{password_naim}}
+#    - user : name=limon     password={{password_limon}}
+#    - user : name=shafayet  password={{password_shafayet}}
+#    - user : name=alim      password={{password_alim}}
+#    - user : name=tanvir    password={{password_tanvir}}
+#    - user : name=bipul     password={{password_bipul}}
+#    - user : name=mamun     password={{password_mamun}}
+#    - user : name=rony      password={{password_rony}}
+    - user : name=20131697dfs     password={{password_pamuser}}
+
+
+
+#    - shell: chage -d 0 srahman
+#    - shell: chage -d 0 rejuan
+#    - shell: chage -d 0 alim
+#    - shell: chage -d 0 kamrul
+#    - shell: chage -d 0 rashed
+#    - shell: chage -d 0 shahadat
+#    - shell: chage -d 0 sahed
+#    - shell: chage -d 0 porimol
+#    - shell: chage -d 0 kartick
+#    - shell: chage -d 0 pavel
+#    - shell: chage -d 0 pervej
+#    - shell: chage -d 0 shuvo
+#    - shell: chage -d 0 bishajit
+#    - shell: chage -d 0 munzurul
+#    - shell: chage -d 0 naim
+#    - shell: chage -d 0 rajib
+    - shell: userdel -r prosenjit
